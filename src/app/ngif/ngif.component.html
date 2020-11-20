@@ -1,0 +1,15 @@
+<div>
+    <input type="radio" (change)="texto = true" id="t1" name="drone" value="t1" checked>
+    <label for="t1">Texto 1</label>
+    <input type="radio" (change)="texto = false" id="t2" name="drone" value="t2">
+      <label for="t2">Texto 2</label>
+    <div *ngIf="texto">
+      <h3>Texto 1</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed fugiat nulla expedita facilis eius qui cupiditate consectetur molestias vero animi repudiandae commodi ratione,
+        saepe nisi doloremque facere nesciunt. Odio, necessitatibus!</p>
+    </div>
+    <div *ngIf="!texto">
+      <h3>Texto 2</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed fugiat nulla expedita facilis eius qui cupiditate consectetur molestias vero animi repudiandae commodi ratione, saepe nisi doloremque facere nesciunt. Odio, necessitatibus!</p>
+    </div>
+  </div>

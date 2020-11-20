@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ColoresComponent } from './colores/colores.component';
 import { SaludoComponent } from './saludo/saludo.component';
+import { NgifComponent } from './ngif/ngif.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ColoresComponent,
-    SaludoComponent
+    SaludoComponent,
+    NgifComponent
   ],
   imports: [
     BrowserModule,
