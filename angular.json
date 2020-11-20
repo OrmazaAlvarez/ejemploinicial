@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "ejemploinicial"
+  "defaultProject": "ejemploinicial",
+  "cli": {
+    "analytics": "82ee125c-6525-4d19-aa21-9bce0975bbd7"
+  }
 }
