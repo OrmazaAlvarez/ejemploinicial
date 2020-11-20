@@ -6,7 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./colores.component.sass']
 })
 export class ColoresComponent implements OnInit {
-
+  
+  colorActual!: String;
+  
   constructor() { }
 
   ngOnInit(): void {
@@ -17,6 +19,7 @@ export class ColoresComponent implements OnInit {
    }
   
   colorHex():String{
-    return "#" + this.generarRandom() + this.generarRandom() + this.generarRandom()
+    this.colorActual = "#" + this.generarRandom() + this.generarRandom() + this.generarRandom()
+    return this.colorActual
   }
 }
