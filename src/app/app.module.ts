@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { ColoresComponent } from './colores/colores.component';
 import { SaludoComponent } from './saludo/saludo.component';
 import { NgifComponent } from './ngif/ngif.component';
+import { NgforComponent } from './ngfor/ngfor.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ColoresComponent,
     SaludoComponent,
-    NgifComponent
+    NgifComponent,
+    NgforComponent
   ],
   imports: [
     BrowserModule,
