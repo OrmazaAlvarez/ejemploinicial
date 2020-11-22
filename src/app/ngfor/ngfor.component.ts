@@ -24,7 +24,7 @@ export class NgforComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  mostrarAutor(_Libro){
+  mostrarAutor(_Libro:Object){
   alert(` ${_Libro.titulo} fue escrito por ${_Libro.autor} `)
 }
 
