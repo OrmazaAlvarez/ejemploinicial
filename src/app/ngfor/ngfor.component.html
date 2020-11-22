@@ -1,1 +1,13 @@
-<p>ngfor works!</p>
+<div>
+    <h3>Lista de libros</h3>
+    <ul>
+        <li *ngFor="let libro of libros; index as indice; first as esPrimero; last as esUltimo; odd as esPar; even as esImpar">
+            {{libro.titulo}} <button (click)="mostrarAutor(libro)">Ver Autor</button> 
+            <span *ngIf="indice == 5">Agotado -</span>
+            <span *ngIf="esPrimero">El mas popular - Stock({{indice}}) - </span>
+            <span *ngIf="esUltimo">El menos vendido -</span>
+            <span *ngIf="esPar">Elemento Par</span>
+            <span *ngIf="esImpar">Elemento Impar</span>
+        </li>
+    </ul>
+</div>
