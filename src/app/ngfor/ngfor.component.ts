@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LibrosseleccionadosService } from '../librosseleccionados.service';
 
 @Component({
   selector: 'app-ngfor',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NgforComponent implements OnInit {
   libros!:Array<Object>;
-  constructor() { 
+  constructor(public Librosseleccionados:LibrosseleccionadosService) { 
     this.libros = [
       {id: 1, titulo: 'El retrato de Dorian Gray', autor: 'Oscar Wilde', descripcion: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio accusamus in iusto incidunt exercitationem vel alias excepturi ullam doloribus porro sed dolore corrupti fugiat, ducimus animi. Doloremque inventore sequi iusto.'},
       {id: 2, titulo: 'Frankenstein', autor: 'Mary Shelley', descripcion: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio accusamus in iusto incidunt exercitationem vel alias excepturi ullam doloribus porro sed dolore corrupti fugiat, ducimus animi. Doloremque inventore sequi iusto.'},
@@ -26,7 +27,8 @@ export class NgforComponent implements OnInit {
   }
   mostrarAutor(_Libro:Object){
   alert(` ${_Libro.titulo} fue escrito por ${_Libro.autor} `)
-}
-
-
+  }
+  agregarLibro(_Libro){
+    this.Librosseleccionados.agregarLibros(_Libro)
+  }
 }

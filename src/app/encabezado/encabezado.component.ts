@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LibrosseleccionadosService } from '../librosseleccionados.service';
 
 @Component({
   selector: 'app-encabezado',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class EncabezadoComponent implements OnInit {
 
   title = 'ejemploinicial';
-  constructor() { }
+  constructor(public Librosseleccionados:LibrosseleccionadosService) { }
 
   ngOnInit(): void {
   }

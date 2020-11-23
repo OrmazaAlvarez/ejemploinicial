@@ -2,7 +2,7 @@
   flex: 1
   height: 60px
   display: table
-  a
+  a, button
     display: table-cell
     color: white
     margin: 0 8px
@@ -14,8 +14,39 @@
     &:hover
       opacity: 0.8
 
-.active
-  background-color: #083b6e
+a.active
+  &:hover, &:focus
+    background-color: #083b6e 
+    
+.mostrar-libros
+  top: 0
+  right: 0
+  background: transparent
+  padding: 15px
+  font-size: 13px
+  outline: none !important
+
+.misLibros
+  position: absolute
+  right: 0
+  top: 60px
+  border: solid 1px #083b6e
+  background: #1a4168
+  width: 200px
+  padding: 5px
+  transition: all 0.2s ease-in-out
+  h2
+    margin: 0 0 5px 0
+    font-size: 20px
+    border-bottom: solid 1px #083b6e
+    padding: 0 0 5px 0
+  ul
+    margin: 0
+    padding: 0
+    list-style-type: none
+    opacity: 0.8
+    li:hover
+      background: #2a66a1
 
 .toolbar
   position: absolute

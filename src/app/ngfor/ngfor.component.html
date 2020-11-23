@@ -3,7 +3,7 @@
     <h3>Lista de libros</h3>
     <ul>
         <li *ngFor="let libro of libros; index as indice; first as esPrimero; last as esUltimo; odd as esPar; even as esImpar">
-            <a [routerLink]="['/detalle', libro.id ]" >{{libro.titulo}}</a> <button (click)="mostrarAutor(libro)">Ver Autor</button> 
+            <a (click)="agregarLibro(libro)" [routerLink]="['/detalle', libro.id ]" >{{libro.titulo}}</a> <button (click)="mostrarAutor(libro)">Ver Autor</button> 
             <span *ngIf="indice == 5">Agotado -</span>
             <span *ngIf="esPrimero">El mas popular - Stock({{indice}}) - </span>
             <span *ngIf="esUltimo">El menos vendido -</span>

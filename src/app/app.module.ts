@@ -14,6 +14,8 @@ import { PieComponent } from './pie/pie.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { DetallesComponent } from './detalles/detalles.component';
 
+import { LibrosseleccionadosService } from './librosseleccionados.service';
+
 const rustasApp:Routes = [
   { path:'colores', component: ColoresComponent },
   { path:'ngif', component: NgifComponent },
@@ -42,7 +44,9 @@ const rustasApp:Routes = [
     AppRoutingModule,
     RouterModule.forRoot(rustasApp)
   ],
-  providers: [],
+  providers: [
+    LibrosseleccionadosService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
