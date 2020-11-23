@@ -1,13 +1,18 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router'
 
 @Component({
-  selector: 'app-ngfor',
-  templateUrl: './ngfor.component.html',
-  styleUrls: ['./ngfor.component.sass']
+  selector: 'app-detalles',
+  templateUrl: './detalles.component.html',
+  styleUrls: ['./detalles.component.sass']
 })
-export class NgforComponent implements OnInit {
+export class DetallesComponent implements OnInit {
+
   libros!:Array<Object>;
-  constructor() { 
+  id!:number;
+  libroActual!:Object;
+
+  constructor( private ruta:ActivatedRoute ) { 
     this.libros = [
       {id: 1, titulo: 'El retrato de Dorian Gray', autor: 'Oscar Wilde', descripcion: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio accusamus in iusto incidunt exercitationem vel alias excepturi ullam doloribus porro sed dolore corrupti fugiat, ducimus animi. Doloremque inventore sequi iusto.'},
       {id: 2, titulo: 'Frankenstein', autor: 'Mary Shelley', descripcion: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio accusamus in iusto incidunt exercitationem vel alias excepturi ullam doloribus porro sed dolore corrupti fugiat, ducimus animi. Doloremque inventore sequi iusto.'},
@@ -23,10 +28,13 @@ export class NgforComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.ruta.params.subscribe( params => {
+      this.id = params['id']
+      this.libroActual = this.seleccionarLibro()
+    })
   }
-  mostrarAutor(_Libro:Object){
-  alert(` ${_Libro.titulo} fue escrito por ${_Libro.autor} `)
-}
-
+  seleccionarLibro(): Object {
+    return this.libros.filter( libro => libro.id == this.id)[0]
+  }
 
 }
