@@ -12,12 +12,11 @@ export class DetallesComponent implements OnInit {
 
   libroActual!:Libro;
   constructor( private ruta:ActivatedRoute, private LibrosService:LibrosseleccionadosService) { 
-    
   }
 
   ngOnInit(): void {
     this.ruta.params.subscribe( params => {
-      this.libroActual = this.LibrosService.seleccionarLibro(params['id'])
+      this.libroActual = this.LibrosService.seleccionarLibro(params['id']);
     })
   }
 

@@ -8,6 +8,7 @@ import { LibrosseleccionadosService } from '../librosseleccionados.service';
 })
 export class EncabezadoComponent implements OnInit {
 
+  activar!: Boolean;
   title = 'ejemploinicial';
   constructor(public Librosseleccionados:LibrosseleccionadosService) { }
 

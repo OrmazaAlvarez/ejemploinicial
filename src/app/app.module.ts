@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -18,15 +19,15 @@ import { DetallesComponent } from './detalles/detalles.component';
 import { LibrosseleccionadosService } from './librosseleccionados.service';
 
 const rustasApp:Routes = [
+  { path:'', component: InicioComponent, pathMatch: 'full' },
   { path:'colores', component: ColoresComponent },
   { path:'ngif', component: NgifComponent },
   { path:'ngfor', component: NgforComponent },
   { path:'nosotros', component: AcerdadeComponent },
   { path:'detalle', redirectTo: 'ngfor' },
-  { path:'detalle/:id', component: DetallesComponent },
-  { path:'', component: InicioComponent, pathMatch: 'full' }
+  { path:'detalle/:id', component: DetallesComponent }
 ]
-
+// TODO: Agregar el componente de error
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,13 +37,14 @@ const rustasApp:Routes = [
     SaludoComponent,
     NgifComponent,
     NgforComponent,
-    DetallesComponent,
     AcerdadeComponent,
+    DetallesComponent,
     PieComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     RouterModule.forRoot(rustasApp), 
     HttpClientModule
   ],

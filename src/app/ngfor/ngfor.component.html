@@ -1,7 +1,7 @@
 <div>
     <h2>Uso de la directiva NgFor</h2>
     <h3>Lista de libros</h3>
-    <ul>
+    <ul *ngIf="LibrosService.libros.length">
         <li *ngFor="let libro of LibrosService.libros; index as indice; first as esPrimero; last as esUltimo; odd as esPar; even as esImpar">
             <a (click)="LibrosService.agregarLibros(libro)" [routerLink]="['/detalle', libro.id ]" >{{libro.titulo}}</a> <button (click)="mostrarAutor(libro)">Ver Autor</button> 
             <span *ngIf="indice == 5">Agotado -</span>
@@ -11,4 +11,7 @@
             <span *ngIf="esImpar">Elemento Impar</span>
         </li>
     </ul>
+    <div *ngIf="LibrosService.errorHttp">
+        No se pudo cargar los datos
+    </div>
 </div>

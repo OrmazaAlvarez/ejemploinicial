@@ -8,6 +8,8 @@ import { Libro } from './libro.model';
 export class LibrosseleccionadosService {
   libros: Libro[];
   librosSelecionados:Libro[];
+  errorHttp!: Boolean;
+
   constructor(private http: HttpClient) { 
     this.libros = []; 
     this.librosSelecionados = [];
@@ -19,7 +21,7 @@ export class LibrosseleccionadosService {
       this.http.get("assets/json/lista-de-libros.json")
                .subscribe(
                            (respuesta:any) =>  this.libros = respuesta,
-                           (respuesta:any) =>  console.log( "Error de internet: ", respuesta)
+                           (respuesta:any) =>  this.errorHttp = true
                  );
     }
   }
@@ -27,7 +29,6 @@ export class LibrosseleccionadosService {
   agregarLibros(_nuevoLibro:Libro){
     this.librosSelecionados.push(_nuevoLibro);
   }
-  
   
   seleccionarLibro(id:number): Libro {
     return this.libros.filter((libro:Libro) => libro.id == id)[0];
