@@ -9,6 +9,7 @@ import { Libro } from '../libro.model';
 })
 export class NgforComponent implements OnInit {
   constructor(public LibrosService:LibrosseleccionadosService) {
+    LibrosService.getLibros();
   }
 
   ngOnInit(): void {

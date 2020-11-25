@@ -9,25 +9,28 @@ export class LibrosseleccionadosService {
   libros: Libro[];
   librosSelecionados:Libro[];
   errorHttp!: Boolean;
+  cargando!: Boolean;
 
   constructor(private http: HttpClient) { 
     this.libros = []; 
     this.librosSelecionados = [];
-    this.getLibros();  
   }
 
   getLibros(){
     if (this.libros.length === 0){
+      this.cargando = true;
       this.http.get("assets/json/lista-de-libros.json")
                .subscribe(
-                           (respuesta:any) =>  this.libros = respuesta,
+                           (respuesta:any) =>  {this.libros = respuesta; this.cargando = false},
                            (respuesta:any) =>  this.errorHttp = true
                  );
     }
   }
 
   agregarLibros(_nuevoLibro:Libro){
-    this.librosSelecionados.push(_nuevoLibro);
+    if (this.librosSelecionados.indexOf(_nuevoLibro) < 0){
+      this.librosSelecionados.push(_nuevoLibro);
+    }
   }
   
   seleccionarLibro(id:number): Libro {

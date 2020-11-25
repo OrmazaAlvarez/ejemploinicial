@@ -12,6 +12,7 @@ export class DetallesComponent implements OnInit {
 
   libroActual!:Libro;
   constructor( private ruta:ActivatedRoute, private LibrosService:LibrosseleccionadosService) { 
+    LibrosService.getLibros();
   }
 
   ngOnInit(): void {
