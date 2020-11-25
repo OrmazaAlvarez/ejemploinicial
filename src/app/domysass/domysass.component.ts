@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Renderer2 } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 interface Pais{
@@ -12,8 +12,10 @@ interface Pais{
   styleUrls: ['./domysass.component.sass']
 })
 export class DomysassComponent implements OnInit {
+  
   Paises!: Pais[];
-  constructor(private http: HttpClient) { 
+  lastAvtive!: HTMLElement;
+  constructor(private http: HttpClient, private render:Renderer2) { 
   }
 
   ngOnInit(): void {
@@ -24,4 +26,17 @@ export class DomysassComponent implements OnInit {
                );
   }
 
+  showActive(element:HTMLElement, button:HTMLElement){
+    if (this.lastAvtive){
+      this.render.removeClass(this.lastAvtive, 'destacado'); 
+    }
+    this.render.addClass(element, 'destacado');
+    this.render.setAttribute(element, "selected-element", "true");
+    let newElement = this.render.createElement("span");
+    this.render.setProperty(newElement, "innerHTML", " ✅ ");
+    this.render.appendChild(element, newElement);
+    this.render.setAttribute(button, "value", "A viajar ✈")
+    this.render.removeAttribute(button, "disabled")
+    this.lastAvtive = element;
+  }
 }

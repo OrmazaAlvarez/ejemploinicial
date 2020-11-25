@@ -2,6 +2,7 @@
     <h2>Usando Render</h2>
     <h3>Lista de paises americanos</h3>
     <ul *ngIf="Paises">
-        <li *ngFor="let pais of Paises">{{pais.name}}</li>
+        <li *ngFor="let pais of Paises" (click)="showActive(myElement, viajeButton)" #myElement>{{pais.name}}</li>
     </ul>
-</div>>
+    <input type="button" disabled value="No puedes viajar aún" #viajeButton />
+</div>
