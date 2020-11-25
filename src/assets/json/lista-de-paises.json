@@ -1,0 +1,142 @@
+[
+    {
+        "id": 1,
+        "name": "Estados Unidos"
+    },
+    {
+        "id": 2,
+        "name": "Brasil"
+    },
+    {
+        "id": 3,
+        "name": "México"
+    },
+    {
+        "id": 4,
+        "name": "Canadá"
+    },
+    {
+        "id": 5,
+        "name": "Argentina"
+    },
+    {
+        "id": 6,
+        "name": "Colombia"
+    },
+    {
+        "id": 7,
+        "name": "Chile"
+    },
+    {
+        "id": 8,
+        "name": "Perú"
+    },
+    {
+        "id": 9,
+        "name": "Venezuela"
+    },
+    {
+        "id": 10,
+        "name": "Ecuador"
+    },
+    {
+        "id": 11,
+        "name": "República Dominicana"
+    },
+    {
+        "id": 12,
+        "name": "Cuba"
+    },
+    {
+        "id": 13,
+        "name": "Guatemala"
+    },
+    {
+        "id": 14,
+        "name": "Panamá"
+    },
+    {
+        "id": 15,
+        "name": "Costa Rica"
+    },
+    {
+        "id": 16,
+        "name": "Bolivia"
+    },
+    {
+        "id": 17,
+        "name": "Uruguay"
+    },
+    {
+        "id": 18,
+        "name": "Paraguay"
+    },
+    {
+        "id": 19,
+        "name": "El Salvador"
+    },
+    {
+        "id": 20,
+        "name": "Trinidad y Tobago"
+    },
+    {
+        "id": 21,
+        "name": "Honduras"
+    },
+    {
+        "id": 22,
+        "name": "Nicaragua"
+    },
+    {
+        "id": 23,
+        "name": "Jamaica"
+    },
+    {
+        "id": 24,
+        "name": "Haití"
+    },
+    {
+        "id": 25,
+        "name": "Bahamas"
+    },
+    {
+        "id": 26,
+        "name": "Surinam"
+    },
+    {
+        "id": 27,
+        "name": "Guyana"
+    },
+    {
+        "id": 28,
+        "name": "Barbados"
+    },
+    {
+        "id": 29,
+        "name": "Belice"
+    },
+    {
+        "id": 30,
+        "name": "Antigua y Barbuda"
+    },
+    {
+        "id": 31,
+        "name": "Santa Lucía"
+    },
+    {
+        "id": 32,
+        "name": "Granada"
+    },
+    {
+        "id": 33,
+        "name": "San Cristóbal y Nieves"
+    },
+    {
+        "id": 34,
+        "name": "San Vicente y las Granadinas"
+    },
+    {
+        "id": 35,
+        "name": "Dominica"
+    }
+]
