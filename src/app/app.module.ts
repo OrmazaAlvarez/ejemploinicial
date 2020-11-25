@@ -17,6 +17,7 @@ import { InicioComponent } from './inicio/inicio.component';
 import { DetallesComponent } from './detalles/detalles.component';
 
 import { LibrosseleccionadosService } from './librosseleccionados.service';
+import { DomysassComponent } from './domysass/domysass.component';
 
 const rustasApp:Routes = [
   { path:'', component: InicioComponent, pathMatch: 'full' },
@@ -25,7 +26,8 @@ const rustasApp:Routes = [
   { path:'ngfor', component: NgforComponent },
   { path:'nosotros', component: AcerdadeComponent },
   { path:'detalle', redirectTo: 'ngfor' },
-  { path:'detalle/:id', component: DetallesComponent }
+  { path:'detalle/:id', component: DetallesComponent },
+  { path:'domysass', component: DomysassComponent }
 ]
 // TODO: Agregar el componente de error
 @NgModule({
@@ -37,6 +39,7 @@ const rustasApp:Routes = [
     SaludoComponent,
     NgifComponent,
     NgforComponent,
+    DomysassComponent,
     AcerdadeComponent,
     DetallesComponent,
     PieComponent
